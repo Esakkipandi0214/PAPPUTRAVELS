@@ -10,7 +10,7 @@ const FavouriteLocation = () => {
   ];
 
   return (
-    <div className="flex w-full px-4  tab_01:justify-center overflow-x-auto gap-3 items-center">
+    <div className="flex w-full   px-4  tab_01:justify-center   tab_01:items-start overflow-x-auto gap-3 items-center">
       {locations.map((location, index) => (
         <div
           key={index}
