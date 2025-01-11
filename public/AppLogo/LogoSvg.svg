@@ -1,0 +1,40 @@
+  <svg
+      width="200"
+      height="200"
+      viewBox="0 0 200 200"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="w-48 h-auto"
+    >
+      {/* Circle */}
+      <circle cx="100" cy="80" r="70" stroke="#FF3366" strokeWidth="4" />
+      
+      {/* PA Text */}
+      <text
+        x="100"
+        y="100"
+        fontSize="60"
+        fontFamily="Arial, sans-serif"
+        textAnchor="middle"
+        fill="#1A202C"
+        fontWeight="900"
+        letterSpacing="-2"
+      >
+        PA
+      </text>
+      
+      {/* PappuTravels Text */}
+      <text
+        x="100"
+        y="180"
+        fontSize="32"
+        fontFamily="Arial, sans-serif"
+        textAnchor="middle"
+        fill="#4A5568"
+        fontWeight="600"
+        letterSpacing="0"
+      >
+        Pappu
+        <tspan fill="#FF3366">Travels</tspan>
+      </text>
+    </svg>
