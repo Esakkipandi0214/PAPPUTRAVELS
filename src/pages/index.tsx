@@ -1,8 +1,13 @@
 import React from 'react'
-
+import Layout from '@/Components/LayoutCode/Layout'
 const index = () => {
   return (
-    <div>index</div>
+    <div>
+      <Layout>        
+        <p>Pappu</p>
+      </Layout>
+
+    </div>
   )
 }
 
