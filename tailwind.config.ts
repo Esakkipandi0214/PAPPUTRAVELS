@@ -15,7 +15,7 @@ export default {
         xl: '1440px',
       },
       colors: {
-        background: "var(--background)",
+        background: "var(--background)", // Ensure these variables are defined in your global styles
         foreground: "var(--foreground)",
       },
     },
