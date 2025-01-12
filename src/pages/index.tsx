@@ -7,7 +7,7 @@ import SocialMediaSidebar from '@/Components/LayoutTemplates/socialMedia';
 import Explore from '@/Components/Home/ContentHome';
 const index = () => {
   return (
-    <div className="h-[100vh] w-full relative">
+    <div className="h-[100vh] w-full overflow-hidden relative">
       {/* Background Image */}
       <div className="w-full h-full relative">
         <Image
