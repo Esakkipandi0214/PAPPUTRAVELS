@@ -73,14 +73,18 @@ const ContactSection: React.FC = () => {
               <h1 className="text-4xl font-bold">Get in touch</h1>
               <p className="pt-2 pb-4">Fill in the form to start a conversation</p>
               <div className="space-y-4">
-                <p className="flex items-center">
-                  <span>Fake address, 9999 City</span>
+                <p className="flex flex-col justify-start">
+                <span className="">Address:</span>
+                  <span>2/172,west st, Chithar chathiram, Paruthikulam 
+                  Gangaikondan Tirunelveli 627352</span>
                 </p>
-                <p className="flex items-center">
-                  <span>123456789</span>
+                <p className="flex justify-start flex-col ">
+                    <span>Phone:</span>
+                  <span> +91 8925722979</span>
                 </p>
-                <p className="flex items-center">
-                  <span>contact@business.com</span>
+                <p className="flex  flex-col justify-start ">
+                <span>Email:</span>
+                  <span>travelspappu2025@gmail.com</span>
                 </p>
               </div>
             </div>
