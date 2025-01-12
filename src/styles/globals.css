@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .swiper-button-next,
+    .swiper-button-prev {
+      @apply text-black bg-transparent rounded-full  p-2; /* Black arrows with white background */
+    }
+  
+  
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+      @apply text-black; /* Ensure arrow icons are styled as black */
+    }
+  }
+  
+  
+  
