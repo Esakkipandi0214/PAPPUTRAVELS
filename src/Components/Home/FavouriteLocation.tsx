@@ -1,12 +1,10 @@
 import React from "react";
-import { MdLocationOn } from "react-icons/md";
+import { FaCar, FaShuttleVan  } from "react-icons/fa"; // Correct named import
 
 const FavouriteLocation = () => {
   const locations = [
-    { name: "New York", description: "Plan Trip" },
-    { name: "Paris", description: "Explore City" },
-    { name: "Tokyo", description: "Discover More" },
-    { name: "London", description: "Visit Now" },
+    { name: "Four Wheelers", description: "Plan Trip", Icon: <FaCar className="text-white/50 text-3xl" /> },
+    { name: "Three Wheelers", description: "Explore City", Icon: <FaShuttleVan className="text-white/50 text-3xl"/> },
   ];
 
   return (
@@ -17,7 +15,8 @@ const FavouriteLocation = () => {
           key={index}
           className="flex  flex-shrink-0 bg-white/15 justify-between tab_01:p-2 p-2 rounded-lg items-center space-x-4 w-[50%] sm:w-[200px]"
         >
-          <MdLocationOn className="text-white/50 text-3xl" />
+          {/* <FaCar className="text-white/50 text-3xl" /> */}
+         {location.Icon} 
           <span className="flex flex-col">
             <p className="text-white flex justify-start font-medium text-base">{location.name}</p>
             <p className="text-gray-800 flex justify-start text-sm">{location.description}</p>
