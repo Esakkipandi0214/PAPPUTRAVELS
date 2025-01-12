@@ -3,7 +3,7 @@ import { FaInstagram, FaFacebookF, FaTwitter } from "react-icons/fa"; // Importi
 
 const SocialMediaSidebar = () => {
   return (
-    <div className="fixed  tab_01:top-1/3 bottom-24 left-0 flex flex-col space-y-4 p-2">
+    <div className="fixed  tab_01:top-1/3 bottom-44 left-0 flex flex-col space-y-4 p-2">
       {/* Instagram */}
       <a
         href="https://www.instagram.com"

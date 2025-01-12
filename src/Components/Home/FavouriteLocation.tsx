@@ -10,8 +10,8 @@ const FavouriteLocation = () => {
   ];
 
   return (
-    <div className="flex relative w-full   h-[55%] Res_412:h-[65%]  tab_01:h-[40%] justify-start   px-4  tab_01:justify-center   tab_01:items-start overflow-x-auto gap-3 items-center">
-      <div className="flex absolute w-full bottom-1   justify-start   px-4  tab_01:justify-center   tab_01:items-start overflow-x-auto gap-3 items-center" >
+    <div className="flex relative w-full   h-[55%] Res_412:h-[65%]  tab_01:h-[40%] justify-start   px-4  tab_01:justify-center   tab_01:items-start overflow-x-hidden gap-3 items-center">
+      <div className="flex absolute w-full bottom-3 Res_412:bottom-0   justify-start p-1   px-4  tab_01:justify-center   tab_01:items-start overflow-x-auto gap-3 items-center" >
       {locations.map((location, index) => (
         <div
           key={index}

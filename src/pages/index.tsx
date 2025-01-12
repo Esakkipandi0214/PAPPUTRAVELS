@@ -7,7 +7,7 @@ import SocialMediaSidebar from '@/Components/LayoutTemplates/socialMedia';
 import Explore from '@/Components/Home/ContentHome';
 const index = () => {
   return (
-    <div className="h-[100vh] w-full overflow-y-hidden  relative">
+    <div className=" h-[90vh] tab_01:h-[100vh] w-full overflow-y-hidden  relative">
       {/* Background Image */}
       <div className="w-full h-full overflow-y-hidden relative">
         <Image
@@ -20,7 +20,7 @@ const index = () => {
       </div>
 
       {/* Content Overlay */}
-      <div className="absolute overflow-y-hidden inset-0 px-1 pt-6 py-2 w-full h-full">
+      <div className="absolute overflow-y-hidden inset-0 px-1  pt-6 py-2 w-full h-[90%] tab_01:h-full">
         <Header />
         <SocialMediaSidebar/>
         <Explore/>
