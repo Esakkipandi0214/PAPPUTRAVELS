@@ -58,7 +58,7 @@ const Header = () => {
               </Link>
             </li>
             <li className="text-[#FFFDF0] font-medium hover:text-gray-300">
-              <Link legacyBehavior href="/">
+              <Link legacyBehavior href="/ContactUs">
                 <a className="text-[#FFFDF0]">Contact us</a>
               </Link>
             </li>
@@ -115,7 +115,7 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link legacyBehavior href="/">
+              <Link legacyBehavior href="/ContactUs">
                 <a
                   className="text-white font-medium hover:text-gray-300"
                   onClick={toggleMenu}
