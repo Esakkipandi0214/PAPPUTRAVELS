@@ -48,7 +48,7 @@ const Header = () => {
         <nav className="hidden tab_01:block">
           <ul className="flex space-x-6">
             <li className="text-[#FFFDF0] font-medium hover:text-gray-300">
-              <Link legacyBehavior href="/VechiclesType/Destination">
+              <Link legacyBehavior href="/Destination">
                 <a className="text-[#FFFDF0]">Destination</a>
               </Link>
             </li>
@@ -95,7 +95,7 @@ const Header = () => {
           {/* Menu Links */}
           <ul className="space-y-6 w-full text-center text-xl">
             <li>
-              <Link legacyBehavior href="/VechiclesType/Destination">
+              <Link legacyBehavior href="/Destination">
                 <a
                   className="text-white font-medium hover:text-gray-300"
                   onClick={toggleMenu}

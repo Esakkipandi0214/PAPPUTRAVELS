@@ -9,7 +9,8 @@ const FavouriteLocation = () => {
   ];
 
   const handleBack = (VechicleType:string) => {
-    router.push(`/VechiclesType/${VechicleType}`); // Navigates to the home page
+    console.log(VechicleType)
+    router.push(`/Destination`); // Navigates to the home page
   };
 
   return (

@@ -5,37 +5,54 @@ import { Navigation } from "swiper/modules"; // Correct import for Swiper v8+
 import "swiper/css";
 import "swiper/css/navigation";
 import Link from "next/link"; // Import Link for navigation
+import { useRouter } from "next/router";
 
 // Images
-import BrakadesswararTemple from "../../../public/LocationsImages/Brihadeeswarar.jpg";
-import Kanyakumari from "../../../public/LocationsImages/kanyakumari.webp";
+import Tirunelveli from "../../../public/Tiruvelveli/TirunelveliLogo.jpg";
+import Thoothukudi from "../../../public/Thoothukudi/ThoothukudiLogo.jpg";
+import Kanyakumari from "../../../public/KanyaKumari/kanyakumariLogo.jpg";
+import Madurai from "../../../public/Madurai/MaduraiLogo.webp";
+import Theni from "../../../public/Theni/TheniLogo.jpg";
+import Tenkasi from "../../../public/Tenkasi/TenkasiLogo.jpg";
+import Ooty from "../../../public/Ooty/OotyLogo.jpg";
+
+
+
+
+
+
 import Temple from "../../../public/LocationsImages/Temple.jpg";
 
 export const Vehicle = () => {
   const [search, setSearch] = useState("");
+  const router = useRouter();
 
   const vehicles = [
-    { id: 1, type: "Car", name: "Toyota Camry", details: "Sedan, 2020 Model", image: BrakadesswararTemple },
+    { id: 1, type: "Car", name: "Toyota Camry", details: "Sedan, 2020 Model", image: Tirunelveli },
     { id: 2, type: "Bike", name: "Harley Davidson", details: "Cruiser, 2019 Model", image: Kanyakumari },
     { id: 3, type: "Three Wheeler", name: "Auto Rickshaw", details: "Electric, 2022 Model", image: Temple },
-    { id: 4, type: "Car", name: "Honda Accord", details: "Sedan, 2021 Model", image: BrakadesswararTemple },
+    { id: 4, type: "Car", name: "Honda Accord", details: "Sedan, 2021 Model", image: Tirunelveli },
     { id: 5, type: "SUV", name: "Tesla Model X", details: "Electric, 2023 Model", image: Kanyakumari },
     { id: 6, type: "Bike", name: "Ducati Panigale", details: "Sport, 2022 Model", image: Temple },
   ];
 
   const locations = [
-    { name: "City Center", image: BrakadesswararTemple },
-    { name: "Airport", image: Kanyakumari },
-    { name: "Train Station", image: Temple },
-    { name: "Bus Depot", image: BrakadesswararTemple },
-    { name: "Shopping Mall", image: Kanyakumari },
-    { name: "Park", image: Temple },
-    { name: "Stadium", image: BrakadesswararTemple },
+    { name: "Tirunelveli", image: Tirunelveli },
+    { name: "Thoothukudi", image: Thoothukudi },
+    { name: "Kanyakumari", image: Kanyakumari },
+    { name: "Madurai", image: Madurai },
+    { name: "Theni", image: Theni },
+    { name: "Tenkasi", image: Tenkasi },
+    { name: "Ooty", image: Ooty },
   ];
 
   const filteredVehicles = vehicles.filter((vehicle) =>
     vehicle.name.toLowerCase().includes(search.toLowerCase())
   );
+
+  const handleLocationClick = (Location:string) => {
+    router.push(`/Location/${Location}`); // Navigates to the home page
+  };
 
   return (
     <div className="space-y-6 overflow-y-auto bg-[#1C325B] h-screen p-6">
@@ -60,7 +77,7 @@ export const Vehicle = () => {
       <div className="flex fixed translate-y-16  items-center text-white text-sm mb-4">
         <Link href="/" className="hover:underline">Home</Link>
         <span className="mx-2">/</span>
-        <span>Vehicles</span>
+        <span>Destination</span>
       </div>
 
       <div className="w-full pt-28 flex flex-col gap-6">
@@ -122,7 +139,9 @@ export const Vehicle = () => {
           >
             {locations.map((location, index) => (
               <SwiperSlide key={index}>
-                <div className="flex flex-col items-center text-center">
+                <div 
+                onClick={()=>handleLocationClick(location.name)}
+                className="flex flex-col items-center text-center">
                   <Image
                     src={location.image}
                     alt={location.name}
