@@ -39,7 +39,7 @@ export default function AuthPage({ onClose ,setIsLoggedIn}: ProfilePopupProps) {
     }
 
     try {
-      const response = await fetch("http://localhost:3000/api/users", {
+      const response = await fetch("/api/users", {
         method: 'POST', // Use POST for login and PUT for registration
         headers: {
           'Content-Type': 'application/json',
