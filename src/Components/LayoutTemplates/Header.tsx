@@ -1,10 +1,32 @@
-import { useState } from "react";
+import { useState ,useEffect} from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "../../../public/AppLogo/logo2.webp";
+import ProfileIcon from '@/Components/ProfileComponents/ProfileIcon'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false)
+
+  useEffect(()=>{
+    handleUpdateLocalProfileData()
+  },[])
+
+  const handleUpdateLocalProfileData = () => {
+    const storedData = localStorage.getItem('authToken');
+    
+    if (storedData) {
+      // const parsedData = JSON.parse(storedData);
+      setIsLoggedIn(true)
+    }else{
+      setIsLoggedIn(false)
+    }
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("authToken")
+    setIsLoggedIn(false)
+  }
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -73,6 +95,10 @@ const Header = () => {
             placeholder="Search"
           />
           <span className="absolute right-3 top-2.5 text-gray-500">🔍</span>
+        </div>
+
+        <div className=" px-2 ">
+        <ProfileIcon isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} onLogout={handleLogout} />
         </div>
       </div>
 
