@@ -99,7 +99,7 @@ export default function HeroCarousel() {
   }
 
   return (
-    <section className="w-full  bg-[#411256]  mt-16  py-12 md:py-24 overflow-hidden">
+    <section className="w-full  bg-[#411256]   py-12 md:py-24 overflow-hidden">
       <div className="container mx-auto px-4 relative">
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="w-full md:w-1/2 mb-8 md:mb-0 pr-0 md:pr-8">

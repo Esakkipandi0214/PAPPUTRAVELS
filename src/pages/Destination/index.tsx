@@ -15,10 +15,10 @@ import "swiper/css/navigation";
 // import Theni from "../../../public/Theni/TheniLogo.jpg";
 // import Tenkasi from "../../../public/Tenkasi/TenkasiLogo.jpg";
 // import Ooty from "../../../public/Ooty/OotyLogo.jpg";
-import Homesearch from "../../Components/Home/Homeheader"
 import { MobileMenuBar } from "@/Components/Home/mobile-menu-bar"
 import { MenuOverlay } from "@/Components/Home/MenuOverly"
 import HeroCarousel from '@/Components/Home/Courosal/HeroCarousel'
+import Layout from "@/Components/Home/HomeLayout/Layout"
 
 
 
@@ -26,7 +26,6 @@ import HeroCarousel from '@/Components/Home/Courosal/HeroCarousel'
 // import Temple from "../../../public/LocationsImages/Temple.jpg";
 
 export const Vehicle = () => {
-  const [search, setSearch] = useState("");
   const [activeItem, setActiveItem] = useState("Home")
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
@@ -69,10 +68,11 @@ export const Vehicle = () => {
   // };
 
   return (
-    <div className="space-y-6 overflow-y-auto bg-[#ece7ee] h-screen">
+    <Layout>
+    <div className="space-y-6 bg-transparent h-screen">
 
       {/* Search Bar */}
-      <Homesearch search={search} setSearch={setSearch}/>
+      
       {/* Hero Courosal */}
       <HeroCarousel />
       {/* Breadcrumb */}
@@ -159,6 +159,7 @@ export const Vehicle = () => {
       <MobileMenuBar setActiveItem={setActiveItem} activeItem={activeItem}/>
       <MenuOverlay isOpen={isMenuOpen} onClose={() => { setActiveItem("Home");setIsMenuOpen(false);}} />
     </div>
+    </Layout>
   );
 };
 

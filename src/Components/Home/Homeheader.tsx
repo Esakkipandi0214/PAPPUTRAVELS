@@ -38,7 +38,7 @@ const Homeheader:React.FC<HeaderProps> = ({search,setSearch}) => {
 
   return (
     <>
-    <div className=" px-1  tab_01:px-28 h-[10%] flex fixed  bg-white w-full items-center justify-between  space-x-2">
+    <div className=" px-1  tab_01:px-28 h-[10%] flex fixed z-40 shadow-2xl  bg-white w-full items-center justify-between  space-x-2">
          {/* Logo */}
          <div className="tab_01:flex flex items-center gap-2 tab_01:gap-10  ">
             <div>
