@@ -18,7 +18,7 @@ import "swiper/css/navigation";
 import Homesearch from "../../Components/Home/Homeheader"
 import { MobileMenuBar } from "@/Components/Home/mobile-menu-bar"
 import { MenuOverlay } from "@/Components/Home/MenuOverly"
-
+import HeroCarousel from '@/Components/Home/Courosal/HeroCarousel'
 
 
 
@@ -73,6 +73,8 @@ export const Vehicle = () => {
 
       {/* Search Bar */}
       <Homesearch search={search} setSearch={setSearch}/>
+      {/* Hero Courosal */}
+      <HeroCarousel />
       {/* Breadcrumb */}
       {/* <div className="flex fixed translate-y-16  items-center text-black font-medium text-sm mb-4">
         <Link href="/" className="hover:underline">Home</Link>
