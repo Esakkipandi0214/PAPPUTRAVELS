@@ -48,7 +48,7 @@ export default function ProfilePopup({ onClose }: ProfilePopupProps) {
   }
 
   return (
-    <div className="fixed inset-0   bg-transparent bg-opacity-50 flex items-center justify-center z-50">
+    <div className="fixed  inset-4  tab_01:inset-0   bg-transparent bg-opacity-50 flex items-center justify-center z-50">
       <Card className="w-full max-w-md shadow-lg">
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
           <CardTitle className="text-2xl font-bold">My Profile</CardTitle>
