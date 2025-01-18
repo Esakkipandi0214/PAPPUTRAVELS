@@ -96,7 +96,7 @@ export default function ProfileIcon({ isLoggedIn, onLogout, setIsLoggedIn }: Pro
         )}
       </DropdownMenuContent>
       {isProfileOpen && <ProfilePopup onClose={() => setIsProfileOpen(false)} />}
-      {isLoginOpen && <LoginPage setIsLoggedIn={setIsLoggedIn} onClose={() => setIsLoginOpen(false)} />}
+      {isLoginOpen && <LoginPage setName={setName} setIsLoggedIn={setIsLoggedIn} onClose={() => setIsLoginOpen(false)} />}
     </DropdownMenu>
   )
 }

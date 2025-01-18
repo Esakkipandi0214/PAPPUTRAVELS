@@ -13,14 +13,15 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/Components/ui/card"
 interface ProfilePopupProps {
   onClose: () => void
   setIsLoggedIn: (value: boolean) => void;
+  setName:(value:string)=>void;
 }
 
-export default function AuthPage({ onClose ,setIsLoggedIn}: ProfilePopupProps) {
+export default function AuthPage({ onClose ,setIsLoggedIn,setName}: ProfilePopupProps) {
   const [isLoginMode, setIsLoginMode] = useState(true) // Toggle between login and register
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
-  const [name, setName] = useState('')
+  const [name, setuserName] = useState('')
   // const router = useRouter()
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -54,6 +55,7 @@ export default function AuthPage({ onClose ,setIsLoggedIn}: ProfilePopupProps) {
         
         // Serialize the object before storing it in the cookie
         localStorage.setItem('authToken', JSON.stringify(data.data));
+        setName(data.data.name)
 // Cookies.set('authToken', JSON.stringify(data.data), { expires: 1 });// Store the raw token, as it is the value to be used
           alert('Login Successful!');
           setIsLoggedIn(true)
@@ -92,7 +94,7 @@ export default function AuthPage({ onClose ,setIsLoggedIn}: ProfilePopupProps) {
                   id="name"
                   type="text"
                   value={name}
-                  onChange={(e) => setName(e.target.value)}
+                  onChange={(e) => setuserName(e.target.value)}
                   required={!isLoginMode}
                 />
               </div>
