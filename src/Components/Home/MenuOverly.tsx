@@ -35,9 +35,9 @@ export const MenuOverlay: React.FC<MenuOverlayProps> = ({ isOpen, onClose }) => 
         {/* Menu Links */}
         <ul className="space-y-6 w-full text-center text-xl">
           <li>
-            <Link legacyBehavior href="/Destination">
+            <Link legacyBehavior href="/">
               <a className="text-[#421869] font-medium " onClick={onClose}>
-                Destination
+                Home
               </a>
             </Link>
           </li>
