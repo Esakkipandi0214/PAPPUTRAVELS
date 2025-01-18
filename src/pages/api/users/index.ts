@@ -24,7 +24,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           const user = new User({ username, email, password, role });
           await user.save();
 
-          return res.status(201).json({ message: 'User created successfully', user });
+          return res.status(201).json({ message: 'User created successfully', data:user });
         } else if (email && password) {
           // Login logic
           const user = await User.findOne({ email });

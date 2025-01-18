@@ -73,7 +73,7 @@ export default function AuthPage({ onClose ,setIsLoggedIn}: ProfilePopupProps) {
   }
 
   return (
-    <div className="flex fixed inset-0 bg-transparent bg-opacity-50 items-center justify-center min-h-screen">
+    <div className="flex fixed inset-0 bg-transparent  items-center justify-center min-h-screen">
       <Card className="w-full max-w-md">
         <CardHeader className="flex flex-row justify-between items-center">
           <CardTitle className="text-2xl font-bold">

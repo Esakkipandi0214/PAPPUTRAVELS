@@ -1,88 +1,88 @@
-import React, { useState } from "react";
-import Image from "next/image";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules"; // Correct import for Swiper v8+
+import React, { useEffect, useState } from "react";
+// import Image from "next/image";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import { Navigation } from "swiper/modules"; // Correct import for Swiper v8+
 import "swiper/css";
 import "swiper/css/navigation";
-import Link from "next/link"; // Import Link for navigation
-import { useRouter } from "next/router";
+// import Link from "next/link"; // Import Link for navigation
+// import { useRouter } from "next/router";
 
 // Images
-import Tirunelveli from "../../../public/Tiruvelveli/TirunelveliLogo.jpg";
-import Thoothukudi from "../../../public/Thoothukudi/ThoothukudiLogo.jpg";
-import Kanyakumari from "../../../public/KanyaKumari/kanyakumariLogo.jpg";
-import Madurai from "../../../public/Madurai/MaduraiLogo.webp";
-import Theni from "../../../public/Theni/TheniLogo.jpg";
-import Tenkasi from "../../../public/Tenkasi/TenkasiLogo.jpg";
-import Ooty from "../../../public/Ooty/OotyLogo.jpg";
+// import Tirunelveli from "../../../public/Tiruvelveli/TirunelveliLogo.jpg";
+// import Thoothukudi from "../../../public/Thoothukudi/ThoothukudiLogo.jpg";
+// import Kanyakumari from "../../../public/KanyaKumari/kanyakumariLogo.jpg";
+// import Madurai from "../../../public/Madurai/MaduraiLogo.webp";
+// import Theni from "../../../public/Theni/TheniLogo.jpg";
+// import Tenkasi from "../../../public/Tenkasi/TenkasiLogo.jpg";
+// import Ooty from "../../../public/Ooty/OotyLogo.jpg";
+import Homesearch from "../../Components/Home/Homeheader"
+import { MobileMenuBar } from "@/Components/Home/mobile-menu-bar"
+import { MenuOverlay } from "@/Components/Home/MenuOverly"
 
 
 
 
 
-
-import Temple from "../../../public/LocationsImages/Temple.jpg";
+// import Temple from "../../../public/LocationsImages/Temple.jpg";
 
 export const Vehicle = () => {
   const [search, setSearch] = useState("");
-  const router = useRouter();
+  const [activeItem, setActiveItem] = useState("Home")
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
-  const vehicles = [
-    { id: 1, type: "Car", name: "Toyota Camry", details: "Sedan, 2020 Model", image: Tirunelveli },
-    { id: 2, type: "Bike", name: "Harley Davidson", details: "Cruiser, 2019 Model", image: Kanyakumari },
-    { id: 3, type: "Three Wheeler", name: "Auto Rickshaw", details: "Electric, 2022 Model", image: Temple },
-    { id: 4, type: "Car", name: "Honda Accord", details: "Sedan, 2021 Model", image: Tirunelveli },
-    { id: 5, type: "SUV", name: "Tesla Model X", details: "Electric, 2023 Model", image: Kanyakumari },
-    { id: 6, type: "Bike", name: "Ducati Panigale", details: "Sport, 2022 Model", image: Temple },
-  ];
+  useEffect(()=>{
+    if(activeItem === "Menu"){
+      setIsMenuOpen(true)
+    }else{
+      setIsMenuOpen(false)
+    }
+  },[activeItem])
+  
 
-  const locations = [
-    { name: "Tirunelveli", image: Tirunelveli },
-    { name: "Thoothukudi", image: Thoothukudi },
-    { name: "Kanyakumari", image: Kanyakumari },
-    { name: "Madurai", image: Madurai },
-    { name: "Theni", image: Theni },
-    { name: "Tenkasi", image: Tenkasi },
-    { name: "Ooty", image: Ooty },
-  ];
+  // const router = useRouter();
 
-  const filteredVehicles = vehicles.filter((vehicle) =>
-    vehicle.name.toLowerCase().includes(search.toLowerCase())
-  );
+  // const vehicles = [
+  //   { id: 1, type: "Car", name: "Toyota Camry", details: "Sedan, 2020 Model", image: Tirunelveli },
+  //   { id: 2, type: "Bike", name: "Harley Davidson", details: "Cruiser, 2019 Model", image: Kanyakumari },
+  //   { id: 3, type: "Three Wheeler", name: "Auto Rickshaw", details: "Electric, 2022 Model", image: Temple },
+  //   { id: 4, type: "Car", name: "Honda Accord", details: "Sedan, 2021 Model", image: Tirunelveli },
+  //   { id: 5, type: "SUV", name: "Tesla Model X", details: "Electric, 2023 Model", image: Kanyakumari },
+  //   { id: 6, type: "Bike", name: "Ducati Panigale", details: "Sport, 2022 Model", image: Temple },
+  // ];
 
-  const handleLocationClick = (Location:string) => {
-    router.push(`/Location/${Location}`); // Navigates to the home page
-  };
+  // const locations = [
+  //   { name: "Tirunelveli", image: Tirunelveli },
+  //   { name: "Thoothukudi", image: Thoothukudi },
+  //   { name: "Kanyakumari", image: Kanyakumari },
+  //   { name: "Madurai", image: Madurai },
+  //   { name: "Theni", image: Theni },
+  //   { name: "Tenkasi", image: Tenkasi },
+  //   { name: "Ooty", image: Ooty },
+  // ];
+
+  // const filteredVehicles = vehicles.filter((vehicle) =>
+  //   vehicle.name.toLowerCase().includes(search.toLowerCase())
+  // );
+
+  // const handleLocationClick = (Location:string) => {
+  //   router.push(`/Location/${Location}`); // Navigates to the home page
+  // };
 
   return (
-    <div className="space-y-6 overflow-y-auto bg-[#1C325B] h-screen p-6">
+    <div className="space-y-6 overflow-y-auto bg-[#ece7ee] h-screen">
 
       {/* Search Bar */}
-      <div className="p-3 flex fixed items-center rounded-lg bg-[#4C6B56] w-[90%] tab_01:w-[95%] justify-end space-x-2">
-        <input
-          type="text"
-          placeholder="Search for a vehicle..."
-          className="p-2 border rounded-md tab_01:w-[20%] w-[90%] text-gray-800"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-        />
-        <button
-          className="bg-[#2D7D4D] text-white px-4 py-2 rounded-md hover:bg-[#1F5C39] transition-colors"
-          onClick={() => console.log("Search clicked!")}
-        >
-          Search
-        </button>
-      </div>
+      <Homesearch search={search} setSearch={setSearch}/>
       {/* Breadcrumb */}
-      <div className="flex fixed translate-y-16  items-center text-white text-sm mb-4">
+      {/* <div className="flex fixed translate-y-16  items-center text-black font-medium text-sm mb-4">
         <Link href="/" className="hover:underline">Home</Link>
         <span className="mx-2">/</span>
         <span>Destination</span>
-      </div>
+      </div> */}
 
       <div className="w-full pt-28 flex flex-col gap-6">
         {/* Vehicle Details Section */}
-        <div className="bg-[#F8FAFC] p-4 rounded-md shadow-lg">
+        {/* <div className="bg-[#F8FAFC] p-4 rounded-md shadow-lg">
           <h2 className="text-xl font-semibold mb-4 text-[#131010]">Vehicles</h2>
           {filteredVehicles.length > 0 ? (
             <Swiper
@@ -103,8 +103,8 @@ export const Vehicle = () => {
                 <SwiperSlide key={vehicle.id}>
                   <div className="bg-white relative w-full h-full rounded-lg  transition-shadow">
                     <div className="absolute top-0 left-0 right-0 p-4 z-10">
-                      <h3 className="font-medium text-xl text-[#131010]">{vehicle.name}</h3>
-                      <p className="text-gray-700">{vehicle.details}</p>
+                      <h3 className=" font-bold text-xl text-[#EBF4F6]">{vehicle.name}</h3>
+                      <p className="text-[#EBF4F6] font-medium">{vehicle.details}</p>
                     </div>
                     <Image
                       src={vehicle.image}
@@ -118,11 +118,11 @@ export const Vehicle = () => {
           ) : (
             <p className="text-gray-500">No vehicles found.</p>
           )}
-        </div>
+        </div> */}
 
         {/* Round Locations Section */}
-        <div className="bg-transparent rounded-md">
-          <h2 className="text-xl font-semibold mb-4 text-[#F8FAFC]">Locations</h2>
+        {/* <div className="bg-transparent rounded-md">
+          <h2 className="text-xl font-semibold mb-4 text-black">Locations</h2>
           <Swiper
             modules={[Navigation]}
             spaceBetween={20}
@@ -145,15 +145,17 @@ export const Vehicle = () => {
                   <Image
                     src={location.image}
                     alt={location.name}
-                    className=" tab_01:w-40 w-36 h-36  tab_01:h-40 object-cover rounded-full mb-4 border-2 border-white"
+                    className=" tab_01:w-40 w-36 h-36  tab_01:h-40 object-cover rounded-full mb-4 border-2 border-[#C65BCF]"
                   />
-                  <h3 className="font-medium text-white">{location.name}</h3>
+                  <h3 className="font-medium text-black">{location.name}</h3>
                 </div>
               </SwiperSlide>
             ))}
           </Swiper>
-        </div>
+        </div> */}
       </div>
+      <MobileMenuBar setActiveItem={setActiveItem} activeItem={activeItem}/>
+      <MenuOverlay isOpen={isMenuOpen} onClose={() => { setActiveItem("Home");setIsMenuOpen(false);}} />
     </div>
   );
 };

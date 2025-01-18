@@ -8,6 +8,15 @@
       @apply text-black bg-transparent rounded-full  p-2; /* Black arrows with white background */
     }
   
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+    
+    .no-scrollbar::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, and Opera */
+    }
+    
   
     .swiper-button-next::after,
     .swiper-button-prev::after {
