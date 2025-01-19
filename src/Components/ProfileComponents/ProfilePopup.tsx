@@ -2,8 +2,8 @@
 
 import { X, Camera, Edit3 } from 'lucide-react'
 import { useEffect, useState } from 'react'
-import { Button } from "@/Components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/Components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import Image from 'next/image'
 
 interface ProfilePopupProps {

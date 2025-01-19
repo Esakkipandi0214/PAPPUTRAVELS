@@ -4,7 +4,7 @@ import React, { useState ,useEffect} from 'react'
 import Logo from "../../../public/AppLogo/logo2.webp";
 import { FiMapPin } from "react-icons/fi";
 import PopupLocation from './PopupLocation';
-import ProfileIcon from '@/Components/Home/HomeProfile'
+import ProfileIcon from '@/components/Home/HomeProfile'
 
 interface HeaderProps{
     search:string;
@@ -38,7 +38,7 @@ const Homeheader:React.FC<HeaderProps> = ({search,setSearch}) => {
 
   return (
     <>
-    <div className=" px-1  tab_01:px-28 h-[10%] flex fixed z-40 shadow-2xl  bg-white w-full items-center justify-between  space-x-2">
+    <div className=" px-1  tab_01:px-10 lg1:px-28 h-[10%] flex fixed z-40 shadow-2xl  bg-white w-full items-center justify-between  space-x-2">
          {/* Logo */}
          <div className="tab_01:flex flex items-center gap-2 tab_01:gap-10  ">
             <div>
@@ -75,7 +75,7 @@ const Homeheader:React.FC<HeaderProps> = ({search,setSearch}) => {
         </div>
         <div className=' flex gap-7 p-2 tab_01:p-0 tab_01:items-center ' >
             <div>
-       <nav className="hidden  tab_01:block">
+       <nav className="hidden    lg1:block">
           <ul className="flex space-x-6 ">
             <li className="text-[#C65BCF] font-medium hover:text-gray-300">
               <Link legacyBehavior href="/">

@@ -19,6 +19,7 @@ module.exports = {
   			Res_390: '390px',
   			tab_01: '768px',
   			lg: '976px',
+			lg1:'1028px',
   			xl: '1440px'
   		},
   		borderRadius: {

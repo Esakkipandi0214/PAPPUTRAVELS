@@ -2,13 +2,13 @@
 
 import { useState, useEffect } from 'react'
 import { User, LogOut, LogIn } from 'lucide-react'
-import { Button } from "@/Components/ui/button"
+import { Button } from "@/components/ui/button"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/Components/ui/dropdown-menu"
+} from "@/components/ui/dropdown-menu"
 import ProfilePopup from '../ProfileComponents/ProfilePopup'
 import LoginPage from '../ProfileComponents/LoginPage'
 import Image from 'next/image'

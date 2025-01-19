@@ -15,11 +15,11 @@ import "swiper/css/navigation";
 // import Theni from "../../../public/Theni/TheniLogo.jpg";
 // import Tenkasi from "../../../public/Tenkasi/TenkasiLogo.jpg";
 // import Ooty from "../../../public/Ooty/OotyLogo.jpg";
-import { MobileMenuBar } from "@/Components/Home/mobile-menu-bar"
-import { MenuOverlay } from "@/Components/Home/MenuOverly"
-import HeroCarousel from '@/Components/Home/Courosal/HeroCarousel'
-import Layout from "@/Components/Home/HomeLayout/Layout"
-
+import { MobileMenuBar } from "@/components/Home/mobile-menu-bar"
+import { MenuOverlay } from "@/components/Home/MenuOverly"
+import HeroCarousel from '@/components/Home/Courosal/HeroCarousel'
+import Layout from "@/components/Home/HomeLayout/Layout"
+import TourPackageSlider from '../../components/Home/TourPackageSlider/TourPackageSlider'
 
 
 
@@ -69,12 +69,13 @@ export const Vehicle = () => {
 
   return (
     <Layout>
-    <div className="space-y-6 bg-transparent h-screen">
+    <div className="space-y-6 bg-transparent">
 
       {/* Search Bar */}
       
       {/* Hero Courosal */}
       <HeroCarousel />
+      <TourPackageSlider/>
       {/* Breadcrumb */}
       {/* <div className="flex fixed translate-y-16  items-center text-black font-medium text-sm mb-4">
         <Link href="/" className="hover:underline">Home</Link>

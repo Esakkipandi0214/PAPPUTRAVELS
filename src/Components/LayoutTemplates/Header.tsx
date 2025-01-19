@@ -14,10 +14,10 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-transparent tab_01:bg-white/30 mx-auto tab_01:backdrop-blur-md w-[100%] tab_01:w-[50%] text-white tab_01:rounded-full py-2 px-10 tab_01:shadow-lg">
+    <header className="bg-transparent  lg1:bg-white/30 mx-auto  lg1:backdrop-blur-md w-[100%]  lg1:w-[50%] text-white  lg1:rounded-full py-2 px-10  lg1:shadow-lg">
       <div className="max-w-7xl mx-auto bg-transparent flex justify-between items-center">
         {/* Logo */}
-        <div className="tab_01:block hidden">
+        <div className=" lg1:block hidden">
           <Image
             src={Logo}
             alt="App Logo"
@@ -28,7 +28,7 @@ const Header = () => {
         </div>
 
         {/* Hamburger Menu for Mobile */}
-        <div className="tab_01:hidden flex items-center">
+        <div className=" lg1:hidden flex items-center">
           <button
             className="text-white focus:outline-none"
             onClick={toggleMenu}
@@ -48,7 +48,7 @@ const Header = () => {
         </div>
 
         {/* Navigation Links for Larger Screens */}
-        <nav className="hidden tab_01:block">
+        <nav className="hidden  lg1:block">
           <ul className="flex space-x-6">
             <li className="text-[#FFFDF0] font-medium hover:text-gray-300">
               <Link legacyBehavior href="/Destination">
@@ -69,10 +69,10 @@ const Header = () => {
         </nav>
 
         {/* Search Bar for Both Small and Large Screens */}
-        <div className="relative w-full tab_01:w-auto flex items-center ml-4">
+        <div className="relative w-full  tab_01:w-[50%]  lg1:w-auto flex items-center ml-4">
           <input
             type="text"
-            className="pl-3 pr-4 py-2 rounded-3xl bg-gray-200 text-gray-800 w-full tab_01:w-auto"
+            className="pl-3 pr-4 py-2 rounded-3xl bg-gray-200 text-gray-800 w-full  lg1:w-auto"
             placeholder="Search"
           />
           <span className="absolute right-3 top-2.5 text-gray-500">🔍</span>
