@@ -15,7 +15,7 @@ export const MenuOverlay: React.FC<MenuOverlayProps> = ({ isOpen, onClose }) => 
 
   return (
     <div className="fixed inset-0 bg-white bg-opacity-90 text-[#421869] flex flex-col items-center justify-center z-50">
-      <div className="w-full h-full py-10">
+      <div className="w-full h-full py-10 tab_01:pt-28 lg1:py-10 ">
         {/* Close Button */}
         <span className="text-2xl w-full px-4 text-red-500">
           <button onClick={onClose} className="hover:opacity-75">✖</button>
