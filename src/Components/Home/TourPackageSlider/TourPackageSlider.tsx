@@ -9,15 +9,15 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from "@/Components/ui/card";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel";
-import { tourPackages, TourPackage } from "./tourPackages";
+} from "@/Components/ui/carousel";
+import { tourPackages, TourPackage } from "@/Components/Home/TourPackageSlider/tourPackages";
 
 const TourPackageCard: React.FC<{ package: TourPackage }> = ({ package: tourPackage }) => (
   <Card className="w-full h-[400px] flex flex-col">

@@ -15,11 +15,11 @@ import "swiper/css/navigation";
 // import Theni from "../../../public/Theni/TheniLogo.jpg";
 // import Tenkasi from "../../../public/Tenkasi/TenkasiLogo.jpg";
 // import Ooty from "../../../public/Ooty/OotyLogo.jpg";
-import { MobileMenuBar } from "@/components/Home/mobile-menu-bar"
-import { MenuOverlay } from "@/components/Home/MenuOverly"
-import HeroCarousel from '@/components/Home/Courosal/HeroCarousel'
-import Layout from "@/components/Home/HomeLayout/Layout"
-import TourPackageSlider from '../../components/Home/TourPackageSlider/TourPackageSlider'
+import { MobileMenuBar } from "@/Components/Home/mobile-menu-bar"
+import { MenuOverlay } from "@/Components/Home/MenuOverly"
+import HeroCarousel from '@/Components/Home/Courosal/HeroCarousel'
+import Layout from "@/Components/Home/HomeLayout/Layout"
+import TourPackageSlider from '../../Components/Home/TourPackageSlider/TourPackageSlider'
 
 
 

@@ -1,10 +1,10 @@
 import React from 'react';
 // import Layout from '@/Components/LayoutCode/Layout'
-import Header from '@/components/LayoutTemplates/Header';
+import Header from '@/Components/LayoutTemplates/Header';
 import Image from 'next/image';
 import bgImage from '../../public/AppLogo/background_image.jpg'
-import SocialMediaSidebar from '@/components/LayoutTemplates/socialMedia';
-import Explore from '@/components/Home/ContentHome';
+import SocialMediaSidebar from '@/Components/LayoutTemplates/socialMedia';
+import Explore from '@/Components/Home/ContentHome';
 const index = () => {
   return (
     <div className=" h-[90vh]   Res_390:h-[100vh] w-full overflow-y-hidden  relative">

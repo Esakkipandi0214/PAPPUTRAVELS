@@ -4,7 +4,7 @@ import React, { useState ,useEffect} from 'react'
 import Logo from "../../../public/AppLogo/logo2.webp";
 import { FiMapPin } from "react-icons/fi";
 import PopupLocation from './PopupLocation';
-import ProfileIcon from '@/components/Home/HomeProfile'
+import ProfileIcon from '@/Components/Home/HomeProfile'
 
 interface HeaderProps{
     search:string;
