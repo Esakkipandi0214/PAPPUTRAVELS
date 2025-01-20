@@ -18,10 +18,13 @@ import {
 } from "@/Components/ui/carousel";
 import { Button } from "@/Components/ui/button";
 import { tourPackages, TourPackage } from "@/Components/Home/TourPackageSlider/tourPackages";
+import { useRouter } from "next/router";
+
+
 
 const TourPackageCard: React.FC<{ package: TourPackage }> = ({ package: tourPackage }) => (
   <Card className="w-full h-auto md:h-[400px] flex flex-col justify-between">
-    <CardHeader className="p-0.5">
+    <CardHeader  className="p-0.5">
       <div className="relative w-full h-40">
         <Image
           src={tourPackage.imageUrl}
@@ -57,6 +60,11 @@ const TourPackageCard: React.FC<{ package: TourPackage }> = ({ package: tourPack
 );
 
 const TourPackageSlider: React.FC = () => {
+  const router = useRouter();
+
+  const handleTripRoute = (id:string) => {
+    router.push(`/Trip/${id}`); // Redirect to the "/about" page
+  };
   return (
     <div className="relative w-full  lg1:px-16 px-6 overflow-hidden">
       <Carousel
@@ -70,6 +78,7 @@ const TourPackageSlider: React.FC = () => {
           {tourPackages.map((tourPackage) => (
             <CarouselItem
               key={tourPackage.id}
+              onClick={()=>handleTripRoute(tourPackage.id)}
               className="basis-full md:basis-1/3 lg:basis-1/4"
             >
               <div className="p-1">
