@@ -9,9 +9,9 @@ interface TripCardProps {
 
 export function TripCard({ trip }: TripCardProps) {
   return (
-    <Card className="bg-gray-800 border-gray-700 w-72">
+    <Card className="bg-white  shadow-lg w-72">
       <CardHeader>
-        <CardTitle className="text-xl text-white">{trip.destination}</CardTitle>
+        <CardTitle className="text-xl text-[#411256]">{trip.destination}</CardTitle>
         <CardDescription className="text-gray-400">
           {trip.isFuture ? (
             <Badge variant="secondary" className="bg-blue-500 text-white">
