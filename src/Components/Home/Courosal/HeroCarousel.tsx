@@ -111,7 +111,7 @@ export default function HeroCarousel() {
                 }`}
                 aria-hidden={currentSlide !== index}
               >
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                <h2 className="text-4xl tab_01:text-2xl  lg1:text-5xl font-bold text-white mb-4">
                   {slide.title}
                 </h2>
                 <p className="text-xl text-white/80 mb-6">
@@ -140,14 +140,14 @@ export default function HeroCarousel() {
         </div>
         <button
           onClick={goToPrevSlide}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/50 rounded-full p-2 hover:bg-white/75 transition-colors z-10"
+          className="absolute -left-10 hidden lg1:block top-1/2 transform -translate-y-1/2 bg-white/50 rounded-full p-2 hover:bg-white/75 transition-colors z-10"
           aria-label="Previous slide"
         >
           <ChevronLeftIcon className="w-6 h-6 text-primary" />
         </button>
         <button
           onClick={goToNextSlide}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/50 rounded-full p-2 hover:bg-white/75 transition-colors z-10"
+          className="absolute -right-10 top-1/2 hidden lg1:block transform -translate-y-1/2 bg-white/50 rounded-full p-2 hover:bg-white/75 transition-colors z-10"
           aria-label="Next slide"
         >
           <ChevronRightIcon className="w-6 h-6 text-primary" />
