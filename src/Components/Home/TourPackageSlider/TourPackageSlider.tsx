@@ -58,7 +58,7 @@ const TourPackageCard: React.FC<{ package: TourPackage }> = ({ package: tourPack
 
 const TourPackageSlider: React.FC = () => {
   return (
-    <div className="relative w-full max-w-screen-xl mx-auto overflow-hidden">
+    <div className="relative w-full  lg1:px-16 px-6 overflow-hidden">
       <Carousel
         opts={{
           align: "start",
@@ -79,8 +79,8 @@ const TourPackageSlider: React.FC = () => {
           ))}
         </CarouselContent>
         {/* Position arrows inside the carousel container */}
-        <CarouselPrevious className="absolute top-32 lg1:top-1/2 left-4 transform -translate-y-1/2 bg-white shadow-md rounded-full p-2 z-10 hover:bg-gray-100" />
-        <CarouselNext className="absolute top-32  lg1:top-1/2 right-4 transform -translate-y-1/2 bg-white shadow-md rounded-full p-2 z-10 hover:bg-gray-100" />
+        <CarouselPrevious className="absolute top-32 lg1:top-1/2 left-4 lg1:-left-10 transform -translate-y-1/2 bg-white shadow-md rounded-full p-2 z-10 hover:bg-gray-100" />
+        <CarouselNext className="absolute top-32  lg1:top-1/2  lg1:-right-10 right-4 transform -translate-y-1/2 bg-white shadow-md rounded-full p-2 z-10 hover:bg-gray-100" />
       </Carousel>
     </div>
   );

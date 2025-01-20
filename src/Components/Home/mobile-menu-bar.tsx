@@ -17,7 +17,7 @@ interface MobileMenuProps{
 export const MobileMenuBar:React.FC<MobileMenuProps>=({activeItem, setActiveItem})=> {
 
   return (
-    <div className="fixed bottom-4  lg1:hidden left-4 right-4 bg-background/80 backdrop-blur-md rounded-full shadow-lg">
+    <div className="fixed z-50 bottom-4  lg1:hidden left-4 right-4 bg-background/80 backdrop-blur-md rounded-full shadow-lg">
       <nav className="flex justify-around items-center h-16">
         {menuItems.map((item) => (
           <button
