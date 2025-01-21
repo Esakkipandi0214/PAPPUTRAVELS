@@ -5,8 +5,17 @@ import "swiper/css";
 import "swiper/css/navigation";
 import Image from 'next/image';
 import {LocationDatas} from './locationdata'
+import { useRouter } from "next/router";
+
 
 const LocationSlider = () => {
+
+  const router = useRouter();
+  
+    const handleLocationClick = (id:string) => {
+      router.push(`/Location/${id}`); // Redirect to the "/about" page
+    };
+
   return (
     <div className="bg-transparent  rounded-md">
     <h2 className="text-xl font-bold mb-4 text-[#411256] pl-5 ">Locations</h2>
@@ -27,7 +36,7 @@ const LocationSlider = () => {
       {LocationDatas.map((location, index) => (
         <SwiperSlide key={index}>
           <div 
-        //   onClick={()=>handleLocationClick(location.name)}
+          onClick={()=>handleLocationClick(location.name)}
           className="flex flex-col items-center text-center">
             <Image
               src={location.image}

@@ -3,6 +3,7 @@ import { Timeline } from "../../Components/TripTimeline/Timeline"
 import { trips } from "../../Components/TripTimeline/tripsdata"
 import Layout from "@/Components/Home/HomeLayout/Layout"
 import { useRouter } from "next/router"
+import LocationCollage from "@/Components/Trips/location-collage"
 
 export default function TripsPage() {
     const reactRouter = useRouter()
@@ -28,7 +29,8 @@ export default function TripsPage() {
 		</li>
 	</ol>
 </nav>
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-1">
+		<LocationCollage/>
         <Timeline trips={trips} />
       </div>
     </div>

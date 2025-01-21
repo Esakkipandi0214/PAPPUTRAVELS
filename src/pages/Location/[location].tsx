@@ -12,6 +12,8 @@ import mancholai from "../../../public/Tiruvelveli/mancholai.jpg";
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import Layout from "@/Components/Home/HomeLayout/Layout"
+
 
 
 const Locations: React.FC = () => {
@@ -61,9 +63,10 @@ const Locations: React.FC = () => {
   ];
 
   return (
-    <div className="w-full flex flex-col gap-4 h-[100vh] p-2 bg-[#1C325B]">
+    <Layout>
+    <div className="w-full flex flex-col gap-4 h-[100vh] p-2 bg-transparent">
         {/* Breadcrumb */}
-      <div className="flex pt-6 items-center text-white text-sm mb-4">
+      <div className="flex pt-6 items-center text-[#411256] font-medium text-sm mb-4">
         <Link href="/Destination" className="hover:underline">Destination</Link>
         <span className="mx-2">/</span>
         <span>{location}</span>
@@ -126,6 +129,7 @@ const Locations: React.FC = () => {
         </Swiper>
       </div>
     </div>
+    </Layout>
   );
 };
 
